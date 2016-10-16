@@ -19,7 +19,11 @@ aws autoscaling delete-launch-configuration --launch-configuration-name week4lc
 #aws elb de register instances from load-balancer
 aws elb deregister-instances-from-load-balancer --load-balancer-name pmarcian-lb --instances $instanceNameArray
 
+<<<<<<< HEAD
 #aws elb delete listeners 
+=======
+#aws elb delete listeners
+>>>>>>> 2469d96df7035641149435dc48bcae0da69a6062
 aws elb delete-load-balancer-listeners --load-balancer-name pmarcian-lb --load-balancer-ports 80
 
 #aws elb delete load-balancers

@@ -1,8 +1,13 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 # now with positional parameters
 # AMI ID, key-name, security-group, launch-configuration, count
 # $1    , $2      , $3            , $4                  , $5
+=======
+# Peter Marciano II
+# Week 4 Assignment
+>>>>>>> 2469d96df7035641149435dc48bcae0da69a6062
 
 aws ec2 run-instances --image-id ami-06b94666 --count 3 --key-name week3 --security-group-ids sg-a0df10d9 --instance-type t2.micro --user-data file://installapp.sh --placement AvailabilityZone=us-west-2a
 
