@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# now with positional parameters
+# AMI ID, key-name, security-group, launch-configuration, count
+# $1    , $2      , $3            , $4                  , $5
+
 aws ec2 run-instances --image-id ami-06b94666 --count 3 --key-name week3 --security-group-ids sg-a0df10d9 --instance-type t2.micro --user-data file://installapp.sh --placement AvailabilityZone=us-west-2a
 
 aws elb create-load-balancer --load-balancer-name pmarcian-lb --listeners "Protocol=HTTP,LoadBalancerPort=80,InstanceProtocol=HTTP,InstancePort=80" --availability-zones us-west-2a
